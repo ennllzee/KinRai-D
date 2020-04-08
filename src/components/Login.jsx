@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import logo from '../img/Logo1.png'
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import Random from './Random';
 
 
 export default class Login extends Component {
@@ -12,7 +13,10 @@ export default class Login extends Component {
         this.state = {
             username:'',
             password:'',
-            currentUser: null
+            currentUser: null,
+            list: [],
+            hate: [],
+            his: []
         }
         this.logout = this.logout.bind(this)
     }
@@ -26,18 +30,31 @@ export default class Login extends Component {
         if (!this.state.username || !this.state.password) {
             window.alert('Wrong username or password, Try again.');
             return false;
-        }else{
+        }else{ //เพิ่มการตรวจสอบ ถ้ามี username และ password ที่ตรงกับ input ->
+            //const list = [] //ทำการดึงข้อมูลจาก database มา ทุก collection ปล. firebase ใช้ loop for each ในการดึงข้อมูล 
+            //const his = []
+            //const hate = []
             this.setState({
                 currentUser: this.state
+                //list:
+                //his:
+                //hate:
             })
-        } 
+        } /*else { //กรณีที่หาไม่เจอ
+            window.alert('Wrong username or password, Try again.');
+            return false;
+        }
+        */
     }
 
     logout(){
         this.setState({
             username:'',
             password:'',
-            currentUser: null
+            currentUser: null,
+            list: [],
+            hate: [],
+            his: []
         })
     }
 
@@ -47,6 +64,7 @@ export default class Login extends Component {
             return(
                 <div>
                 <Navbar username = {currentUser.username} logout = {this.logout}  />
+                <Random list = {currentUser.list} his = {currentUser.his} hate = {currentUser.hate} />
                 </div>
             )
         }else{

@@ -1,27 +1,28 @@
 import React, { Component } from 'react'
+import { render } from '@testing-library/react'
 
 export default class Random extends Component {
-  
-  state = {
-    name:'',
-    amount:''
-  }
+    
+    state = {
+        list: this.props.list,
+        his: this.props.his,
+        hate: this.props.hate,
+        deny: [],
+        now: ''
+    }
 
-  onChange = (e) => {
-    this.setState( { [e.target.name]: e.target.value } );
-  }
+    onSubmit = (e) => {
+        e.preventDefault();
+        this.setState({
+            now: this.state.list.random()
+        })
+    }
 
-  onSubmit = (e) => {
-    e.preventDefault();
-    this.props.addTransaction(this.state.name, this.state.amount);
-    this.setState( { name:'', amount:'' });
-  }
-  
-  render() {
-    return (
-      <div>
-        <input type="submit" value="random" className="btn btn-primary btn-block"/>
-      </div>
-    )
-  }
+    render(){
+        return (
+        <div align="center">
+            <input type="submit" value="Random" className="btn btn-primary btn-block"/>
+        </div>
+        )
+    }
 }
