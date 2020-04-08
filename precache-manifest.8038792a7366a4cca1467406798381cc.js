@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "088b112d40795e46742ffc5da7393c87",
+    "revision": "e415bbe42d44c80b6509ffa98aeac033",
     "url": "/KinRai-D/index.html"
   },
   {
-    "revision": "4850e393f142cb1eff13",
+    "revision": "6140b59c69e2f3ff021b",
     "url": "/KinRai-D/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "528bf4841912a596fe01",
-    "url": "/KinRai-D/static/js/2.de7ce780.chunk.js"
+    "revision": "d7217e2c777ba1b48585",
+    "url": "/KinRai-D/static/js/2.97ae5de0.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/KinRai-D/static/js/2.de7ce780.chunk.js.LICENSE.txt"
+    "url": "/KinRai-D/static/js/2.97ae5de0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4850e393f142cb1eff13",
-    "url": "/KinRai-D/static/js/main.401c553d.chunk.js"
+    "revision": "6140b59c69e2f3ff021b",
+    "url": "/KinRai-D/static/js/main.60b58c47.chunk.js"
   },
   {
     "revision": "a80a0b10c17f48d45ddb",
