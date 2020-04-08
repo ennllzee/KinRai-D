@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import Login from './components/Login';
-import {v4} from 'uuid';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Register from './components/Register';
-import Head from './components/Head';
 
 export default class App extends Component {
+
   render() {
     return (
       <Router>

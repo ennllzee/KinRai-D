@@ -1,9 +1,20 @@
-import React from 'react'
+import React, {Component} from 'react'
 import logo from '../img/Logo1.png'
 import { Link } from 'react-router-dom';
 
-export default function Register() {
+export default class Register extends Component {
   
+    constructor(props) {
+        super(props)
+        this.state = {
+            user : '',
+            pass : '',
+            confirm : ''
+        }
+        
+    }
+
+    render(){
       return (
             <section className="section container">
                     <table align="center">
@@ -18,21 +29,21 @@ export default function Register() {
                                 <div className="field">
                                     <label className="label" htmlFor="">New Username</label>
                                     <div className="control">
-                                        <input className="input" type="username" name="new user"></input>
+                                        <input className="input" type="text" name="user"></input>
                                     </div>
                                 </div>
     
                                 <div className="field">
                                     <label className="label" htmlFor="">New Password</label>
                                     <div className="control">
-                                        <input className="input" type="password" name=" new password"></input>
+                                        <input className="input" type="password" name="pass"></input>
                                     </div>
                                 </div>
 
                                 <div className="field">
-                                    <label className="label" htmlFor="">New Password</label>
+                                    <label className="label" htmlFor="">Confirm Password</label>
                                     <div className="control">
-                                        <input className="input" type="password" name=" new password"></input>
+                                        <input className="input" type="password" name="confirm"></input>
                                     </div>
                                 </div>
     
@@ -52,5 +63,5 @@ export default function Register() {
 
                 </section>
         )
-    
+    }
 }
