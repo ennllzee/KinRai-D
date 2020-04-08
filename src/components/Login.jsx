@@ -8,48 +8,37 @@ export default class Login extends Component {
 
     constructor(props) {
         super(props)
+
         this.state = {
-            username : '',
-            password : '',
-            currentUser : null
+            username:'',
+            password:'',
+            currentUser: null
         }
         this.logout = this.logout.bind(this)
     }
 
     onChange = (e) => {
-        this.setState( { [e.target.username]: e.target.value } );
+        this.setState( { [e.target.name]: e.target.value } );
     }
-
+    
     onSubmit = (e) => {
         e.preventDefault()
-        const {username,password} = this.state
-        this.setState({
-            currentUser: this.state
-        })
-        /*firebase.auth()
-            .signInWithEmailAndPassword(username, password)
-            .then(response => {
-                this.setState({
-                    currentUser: response.user                    
-                })
+        if (!this.state.username || !this.state.password) {
+            window.alert('Wrong username or password, Try again.');
+            return false;
+        }else{
+            this.setState({
+                currentUser: this.state
             })
-            .catch(error => {
-                this.setState({
-                    message: error.message
-                })
-            })
-        */
+        } 
     }
 
     logout(){
         this.setState({
-            currentUser : null
+            username:'',
+            password:'',
+            currentUser: null
         })
-        /*firebase.auth().signOut().then(response => {
-            this.setState({
-                currentUser : null
-            })
-        })*/
     }
 
     render() {
@@ -75,20 +64,20 @@ export default class Login extends Component {
                                     <div className="field">
                                         <label className="label" htmlFor="">Username</label>
                                         <div className="control">
-                                            <input className="input" type="text" name="username" onChange={this.onChange}></input>
+                                            <input className="input" type="text" name="username" onChange={this.onChange} value={this.state.username}></input>
                                         </div>
                                     </div>
         
                                     <div className="field">
                                         <label className="label" htmlFor="">Password</label>
                                         <div className="control">
-                                            <input className="input" type="password" name="password" onChange={this.onChange}></input>
+                                            <input className="input" type="password" name="password" onChange={this.onChange} value={this.state.password}></input>
                                         </div>
                                     </div>
         
                                     <div className="field is-grouped">
                                         <div className="control">
-                                            <button className="button is-link">Login</button>
+                                            <button type="submit" className="button is-link">Login</button>
                                         </div>
                                     </div>
 
