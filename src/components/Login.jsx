@@ -3,7 +3,7 @@ import logo from '../img/Logo1.png'
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Random from './Random';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default class Login extends Component {
 
@@ -35,11 +35,14 @@ export default class Login extends Component {
             //const his = []
             //const hate = []
             this.setState({
-                currentUser: this.state
-                //list:
+
+                currentUser: this.state,
+                list: ['Rice', 'Noodle', 'Steak', 'Salad']
                 //his:
                 //hate:
+
             })
+
         } /*else { //กรณีที่หาไม่เจอ
             window.alert('Wrong username or password, Try again.');
             return false;
@@ -63,9 +66,9 @@ export default class Login extends Component {
         if(currentUser){
             return(
                 <div>
-                <Navbar username = {currentUser.username} logout = {this.logout}  />
-                <Random list = {currentUser.list} his = {currentUser.his} hate = {currentUser.hate} />
-                </div>
+                    <Navbar username = {currentUser.username} logout = {this.logout}  />
+                    <Random list = {this.state.list} his = {this.state.his} hate = {this.state.hate} />
+                </div>     
             )
         }else{
             return (
