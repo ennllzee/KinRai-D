@@ -51,34 +51,37 @@ export default class Register extends Component {
                                 <div className="field">
                                     <label className="label" htmlFor="">New Username</label>
                                     <div className="control">
-                                        <input className="input" type="text" name="newuser" onChange={this.onChange} value={this.state.newuser}></input>
+                                        <input className="input" type="text" name="newuser" onChange={this.onChange} value={this.state.newuser} placeholder="Enter username"></input>
                                     </div>
                                 </div>
     
                                 <div className="field">
                                     <label className="label" htmlFor="">New Password</label>
                                     <div className="control">
-                                        <input className="input" type="password" name="newpassword" onChange={this.onChange} value={this.state.newpassword}></input>
+                                        <input className="input" type="password" name="newpassword" onChange={this.onChange} value={this.state.newpassword} placeholder="Enter password"></input>
                                     </div>
                                 </div>
 
                                 <div className="field">
                                     <label className="label" htmlFor="">Confirm Password</label>
                                     <div className="control">
-                                        <input className="input" type="password" name="confirm" onChange={this.onChange} value={this.state.confirm}></input>
+                                        <input className="input" type="password" name="confirm" onChange={this.onChange} value={this.state.confirm} placeholder="Enter password"></input>
                                     </div>
                                 </div>
     
                                 <div className="field is-grouped">
                                     <div className="control">
-                                        <button type="submit" className="button is-link">Submit</button>
+                                        <button type="submit" className="button is-link" id="process">Submit</button>
                                     </div>
                                 </div>
 
                             </form>
-                            <Link to="/KinRai-D/">
+                            <br/>
+                            <Link to="/KinRai-D/" id="Link">
                                 Back to Login
                             </Link>
+                            <br/>
+                            <br/>
                             </td>
                         </tr>
                     </table>

@@ -72,46 +72,49 @@ export default class Random extends Component {
 
         return (
             
-            <div className="container mt-4 mb-5">
+            <div>
             <section className="section container">
             <div><Result now={this.state.now}/></div>
-                
+                <br/>
+                <br/>
                 <form id="random_form" onSubmit={this.onSubmit}>
     
-                                <div className="field is-grouped" align="center">
+                                <div className="field is-grouped" align="left">
                                     <div className="control">
-                                        <button type="submit" className="button is-link">Random</button>
-                                    </div>
-                                </div>
-
-                </form>
-                <form id="hate_form" onSubmit={this.addHates}>
-    
-                                <div className="field is-grouped" align="center">
-                                    <div className="control">
-                                        <button type="submit" className="button is-link">Hate this Dish</button>
-                                    </div>
-                                </div>
-
-                </form>
-                <form id="confirm_form" onSubmit={this.comfirm}>
-    
-                                <div className="field is-grouped" align="center">
-                                    <div className="control">
-                                        <button type="submit" className="button is-link">I will have this dish</button>
+                                        <button type="submit" className="button is-link" id="process">Random</button>
                                     </div>
                                 </div>
 
                 </form>
                 <form id="rehate_form" onSubmit={this.clearhate}>
     
-                                <div className="field is-grouped" align="center">
+                                <div className="field is-grouped" align="left">
                                     <div className="control">
-                                        <button type="submit" className="button is-link">Clear Hate List</button>
+                                        <button type="submit" className="button is-link" id="process">Clear Hate List</button>
+                                    </div>
+                                </div>
+
+                </form> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <form id="hate_form" onSubmit={this.addHates}>
+    
+                                <div className="field is-grouped" align="right">
+                                    <div className="control">
+                                        <button type="submit" className="button is-link" id="hate">I hate this dish</button>
                                     </div>
                                 </div>
 
                 </form>
+                
+                <form id="confirm_form" onSubmit={this.comfirm}>
+    
+                                <div className="field is-grouped" align="right">
+                                    <div className="control">
+                                        <button type="submit" className="button is-link" id="con">I will have this dish</button>
+                                    </div>
+                                </div>
+
+                </form>
+                <br/>
             
             </section>
             </div>

@@ -150,7 +150,7 @@ export default class Login extends Component {
         const {currentUser} = this.state
         if(currentUser){
             return(
-                <div>
+                <div className="main">
                     <Navbar username = {currentUser.username} logout = {this.logout}  />
                     <Random list = {this.state.list} hate = {this.state.hate} />
                 </div>
@@ -171,27 +171,31 @@ export default class Login extends Component {
                                     <div className="field">
                                         <label className="label" htmlFor="">Username</label>
                                         <div className="control">
-                                            <input className="input" type="text" name="username" onChange={this.onChange} value={this.state.username}></input>
+                                            <input className="input" type="text" name="username" onChange={this.onChange} value={this.state.username} placeholder="Enter username"></input>
                                         </div>
                                     </div>
         
                                     <div className="field">
                                         <label className="label" htmlFor="">Password</label>
                                         <div className="control">
-                                            <input className="input" type="password" name="password" onChange={this.onChange} value={this.state.password}></input>
+                                            <input className="input" type="password" name="password" onChange={this.onChange} value={this.state.password} placeholder="Enter password"></input>
                                         </div>
                                     </div>
         
                                     <div className="field is-grouped">
                                         <div className="control">
-                                            <button type="submit" className="button is-link">Login</button>
+                                            <button type="submit" className="button is-link" id="process">Login</button>
                                         </div>
                                     </div>
 
                                 </form>
-                                <Link to="/register">
+                                <br/>
+                                <Link to="/register" id="Link">
                                 Click to Register
                                 </Link>
+                                <br/>
+                                <br/>
+                                
                                 </td>
                             </tr>
                         </table>
