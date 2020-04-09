@@ -33,10 +33,6 @@ export default class Random extends Component {
         
     }
 
-    consider = (e) =>{
-        
-    }
-
     comfirm = (e) =>{
         if(this.state.now){
             e.preventDefault()
@@ -56,7 +52,9 @@ export default class Random extends Component {
                 now: '',
                 hate: this.state.hate.concat([this.state.num])  
             })
+            return this.onSubmit
         }
+        
     }
 
     clearhate = (e) => {

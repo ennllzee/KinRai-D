@@ -39,13 +39,13 @@ export default class Register extends Component {
     render(){
       return (
             <section className="section container">
-                    <table align="center">
+                    <table align="center" id="login-form">
                         <tr>
                             <td align="center" width="60%">
                                 <img src={logo} alt="" width="200"/>
                             </td>
                             <td>
-                            <h1>Kin Rai - D </h1>
+                            <h1 id="pages">Register</h1>
                             <form id="register_form" onSubmit={this.onSubmit}>
                                 
                                 <div className="field">
