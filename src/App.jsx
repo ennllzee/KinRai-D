@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import {v4} from 'uuid';
+
 import Login from './components/Login';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Register from './components/Register';
-import Random from './components/Random';
+
 
 export default class App extends Component {
 

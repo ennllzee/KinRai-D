@@ -19,6 +19,10 @@ export default class Login extends Component {
         this.logout = this.logout.bind(this)
     }
 
+    componentDidMount = () => {
+        
+    }
+
     onChange = (e) => {
         this.setState( { [e.target.name]: e.target.value } );
     }
@@ -35,7 +39,11 @@ export default class Login extends Component {
 
                 currentUser: this.state,
                 list: [
-                    'ข้าวผัดต้มยำ', 'สุกี้', 'ข้าวผัด', 'หมูกระเทียม', 'ผัดกะเพรา',	
+                    'ข้าวผัดต้มยำ', 
+                    'สุกี้', 
+                    'ข้าวผัด', 
+                    'หมูกระเทียม', 
+                    'ผัดกะเพรา',	
                     'กุ้งผัดกระเทียม',	
                     'ผัดพริกแกง',	
                     'ข้าวไข่เจียว',
@@ -124,7 +132,7 @@ export default class Login extends Component {
                     'ส้มตำ',	
                     'เกาเหลา'	
                     ]
-                    //list : ['Rice','Noodle','Steak','Bread','Salad']
+                    
                 //hate:
 
             })
@@ -134,6 +142,7 @@ export default class Login extends Component {
             return false;
         }
         */
+       //console.log(exercise)
     }
 
     logout(){
