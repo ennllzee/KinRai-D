@@ -3,7 +3,6 @@ import logo from '../img/Logo1.png'
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Random from './Random';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default class Login extends Component {
 
@@ -15,8 +14,7 @@ export default class Login extends Component {
             password:'',
             currentUser: null,
             list: [],
-            hate: [],
-            his: []
+            hate: []
         }
         this.logout = this.logout.bind(this)
     }
@@ -32,13 +30,11 @@ export default class Login extends Component {
             return false;
         }else{ //เพิ่มการตรวจสอบ ถ้ามี username และ password ที่ตรงกับ input ->
             //const list = [] //ทำการดึงข้อมูลจาก database มา ทุก collection ปล. firebase ใช้ loop for each ในการดึงข้อมูล 
-            //const his = []
             //const hate = []
             this.setState({
 
                 currentUser: this.state,
                 list: ['Rice', 'Noodle', 'Steak', 'Salad']
-                //his:
                 //hate:
 
             })
@@ -56,8 +52,7 @@ export default class Login extends Component {
             password:'',
             currentUser: null,
             list: [],
-            hate: [],
-            his: []
+            hate: []
         })
     }
 
@@ -67,9 +62,10 @@ export default class Login extends Component {
             return(
                 <div>
                     <Navbar username = {currentUser.username} logout = {this.logout}  />
-                    <Random list = {this.state.list} his = {this.state.his} hate = {this.state.hate} />
-                </div>     
+                    <Random list = {this.state.list} hate = {this.state.hate} />
+                </div>
             )
+            
         }else{
             return (
                 <section className="section container">
