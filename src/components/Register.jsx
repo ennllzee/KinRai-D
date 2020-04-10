@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../img/Logo1.png'
 import { Link } from 'react-router-dom';
-import axios from 'axios'
 
 export default class Register extends Component {
   
@@ -32,9 +31,6 @@ export default class Register extends Component {
             }
 
             console.log(user)
-
-            axios.post('http://localhost:5000/users/add', user)
-                .then(res => console.log(res.data))
 
             window.alert('Success, Please back to Login');
             this.setState({
