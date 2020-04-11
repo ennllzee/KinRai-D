@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/KinRai-D/static/css/main.01f77014.chunk.css",
-    "main.js": "/KinRai-D/static/js/main.01bd81fb.chunk.js",
-    "main.js.map": "/KinRai-D/static/js/main.01bd81fb.chunk.js.map",
+    "main.js": "/KinRai-D/static/js/main.1f1a37d4.chunk.js",
+    "main.js.map": "/KinRai-D/static/js/main.1f1a37d4.chunk.js.map",
     "runtime-main.js": "/KinRai-D/static/js/runtime-main.3ac49518.js",
     "runtime-main.js.map": "/KinRai-D/static/js/runtime-main.3ac49518.js.map",
     "static/js/2.88e85971.chunk.js": "/KinRai-D/static/js/2.88e85971.chunk.js",
     "static/js/2.88e85971.chunk.js.map": "/KinRai-D/static/js/2.88e85971.chunk.js.map",
     "index.html": "/KinRai-D/index.html",
-    "precache-manifest.d6d2cc49befffa3192a257420941b5da.js": "/KinRai-D/precache-manifest.d6d2cc49befffa3192a257420941b5da.js",
+    "precache-manifest.ef4b17e59b52022e540fc07071f9b1f8.js": "/KinRai-D/precache-manifest.ef4b17e59b52022e540fc07071f9b1f8.js",
     "service-worker.js": "/KinRai-D/service-worker.js",
     "static/css/main.01f77014.chunk.css.map": "/KinRai-D/static/css/main.01f77014.chunk.css.map",
     "static/js/2.88e85971.chunk.js.LICENSE.txt": "/KinRai-D/static/js/2.88e85971.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.3ac49518.js",
     "static/js/2.88e85971.chunk.js",
     "static/css/main.01f77014.chunk.css",
-    "static/js/main.01bd81fb.chunk.js"
+    "static/js/main.1f1a37d4.chunk.js"
   ]
 }
