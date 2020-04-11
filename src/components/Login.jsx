@@ -19,10 +19,6 @@ export default class Login extends Component {
         this.logout = this.logout.bind(this)
     }
 
-    componentDidMount = () => {
-        
-    }
-
     onChange = (e) => {
         this.setState( { [e.target.name]: e.target.value } );
     }
